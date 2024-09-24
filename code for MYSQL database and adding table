@@ -1,0 +1,28 @@
+CREATE DATABASE IF NOT EXISTS vehiclereg;
+
+USE vehiclereg;
+
+CREATE TABLE IF  vehicles (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    address TEXT NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    phone_number VARCHAR(10) NOT NULL,
+    aadhar_number VARCHAR(12) NOT NULL,
+    driving_license VARCHAR(255) NOT NULL,
+    vehicle_production_company VARCHAR(255) NOT NULL,
+    dob DATE NOT NULL,
+    ownership VARCHAR(50) NOT NULL,
+    year_of_manufacture YEAR NOT NULL,
+    year_of_buying YEAR NOT NULL,
+    reg_number VARCHAR(20) NOT NULL UNIQUE,
+    chasis_number VARCHAR(255) NOT NULL,
+    weight INT NOT NULL,
+    cc VARCHAR(10) NOT NULL,
+    engine_number VARCHAR(255) NOT NULL,
+    color VARCHAR(50) NOT NULL,
+    fuel_type ENUM('Petrol', 'Diesel', 'Speed') NOT NULL,
+    capacity VARCHAR(10) NOT NULL,
+    num_of_cylinders INT NOT NULL,
+    seating_capacity INT NOT NULL
+);
